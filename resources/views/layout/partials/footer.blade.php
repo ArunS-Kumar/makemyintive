@@ -1,8 +1,9 @@
-<!-- /.content-wrapper -->
-<footer class="main-footer">
-<div class="pull-right hidden-xs">
-</div>
-<strong>Copyright &copy; <a href="http://makemyinvite.com">Make My Invite</a>.</strong> 
-</footer>
 
-<div class="control-sidebar-bg"></div>
+<footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 2.3.3
+      </div>
+      <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Make My Invite</a>.</strong> </div>
+    <!-- /.container -->
+  </footer>
