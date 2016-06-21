@@ -12,16 +12,46 @@
 */
 
 Route::get('/', [
-	'uses' => '\App\Http\Controllers\HomeController@index',
-	'as' => 'home',
+	'uses'    => '\App\Http\Controllers\HomeController@index',
+	'as'      => 'home',
 ]);
 
-Route::get('/signin', [
-	'uses' => '\App\Http\Controllers\AuthController@index',
-	'as' => 'signin',
+Route::get('/dashboard', [
+	'uses'    => '\App\Http\Controllers\HomeController@dashboard',
+	'as'      => 'dashboard',
 ]);
 
 Route::get('/signup', [
-	'uses' => '\App\Http\Controllers\AuthController@signup',
-	'as' => 'signup',
+	'uses'    => '\App\Http\Controllers\AuthController@getSignup',
+	'as'      => 'auth.signup',
+	'middleware' => ['guest'],
+]);
+
+Route::post('/signup', [
+	'uses'    => '\App\Http\Controllers\AuthController@postSignup',
+	'middleware' => ['guest'],
+]);
+
+Route::get('/signin', [
+	'uses'    => '\App\Http\Controllers\AuthController@getSignin',
+	'as'      => 'auth.signin',
+	'middleware' => ['guest'],
+]);
+
+Route::post('/signin', [
+	'uses'    => '\App\Http\Controllers\AuthController@postSignin',
+]);
+
+Route::get('/signout', [
+	'uses'    => '\App\Http\Controllers\AuthController@getSignout',
+	'as'      => 'auth.signout'
+]);
+
+Route::get('/forgot_password', [
+	'uses'    => '\App\Http\Controllers\AuthController@getForgotPassword',
+	'as'      => 'forgotpassword'
+]);
+
+Route::post('/forgot_password', [
+	'uses'    => '\App\Http\Controllers\AuthController@postForgotPassword',
 ]);

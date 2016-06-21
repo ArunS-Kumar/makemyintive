@@ -7,7 +7,8 @@
             <i class="fa fa-bars"></i>
           </button>
         </div>
-
+        
+        @if (Auth::check())
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
@@ -35,7 +36,7 @@
                 <li class="footer"><a href="#">View all</a></li>
               </ul>
             </li>
-           
+            
             <!-- User Account Menu -->
             <li class="dropdown user user-menu">
               <!-- Menu Toggle Button -->
@@ -43,7 +44,7 @@
                 <!-- The user image in the navbar-->
                 <img src="./dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">S. Arun Kumar</span>
+                <span class="hidden-xs">{{ Auth::user()->getName() }}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -51,8 +52,9 @@
                   <img src="./dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    S. Arun Kumar - Web Developer
-                    <small>Member since Nov. 2012</small>
+                    {{ Auth::user()->getName() }}
+
+                    <small>Member since {{ date("F Y",strtotime(Auth::user()->getCreatedDate())) }}</small>
                   </p>
                 </li>
                 
@@ -62,14 +64,16 @@
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="{{ route('auth.signout') }}" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
             </li>
+            
           </ul>
         </div>
         <!-- /.navbar-custom-menu -->
+        @endif
       </div>
       <!-- /.container-fluid -->
     </nav>

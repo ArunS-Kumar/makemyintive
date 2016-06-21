@@ -10,6 +10,11 @@ class HomeController extends Controller
     {
     	return view('home.home');
     }
+
+    public function dashboard()
+    {
+    	return view('home.home');	
+    }
 }
 
 
