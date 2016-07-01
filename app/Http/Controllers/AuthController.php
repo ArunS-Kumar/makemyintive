@@ -32,7 +32,7 @@ class AuthController extends Controller
 		]);
 
 		return redirect()
-			->route('home')
+			->route('dashboard')
 			->with('info', 'Your account has been created.');
 	}
 
@@ -51,7 +51,7 @@ class AuthController extends Controller
 		if (!Auth::attempt($request->only(['email', 'password']), $request->has('remember'))){
 			return redirect()->back()->with('info', 'Could not sign you in with those details.');
 		}
-		return redirect()->route('home')->with('info', 'You are now signed in');
+		return redirect()->route('dashboard')->with('info', 'You are now signed in');
 	}
 
 	public function getSignout()

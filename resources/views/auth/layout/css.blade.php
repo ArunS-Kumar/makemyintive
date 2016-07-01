@@ -8,3 +8,5 @@
   <link rel="stylesheet" href="./dist/css/AdminLTE.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="./plugins/iCheck/square/blue.css">
+
+  <style type="text/css"> em.error { color: red; font-size: 12px; } </style>

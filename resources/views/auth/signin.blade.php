@@ -40,10 +40,12 @@
         <div class="form-group has-feedback">
         <input type="email" name="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <em for="email" class="error"></em>
       </div>
       <div class="form-group has-feedback">
         <input type="password" name="password" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <em for="password" class="error"></em>
       </div>
       <div class="row">
         <div class="col-xs-8">

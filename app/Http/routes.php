@@ -49,9 +49,15 @@ Route::get('/signout', [
 
 Route::get('/forgot_password', [
 	'uses'    => '\App\Http\Controllers\AuthController@getForgotPassword',
-	'as'      => 'forgotpassword'
+	'as'      => 'forgotpassword',
+	'middleware' => ['guest'],
 ]);
 
 Route::post('/forgot_password', [
 	'uses'    => '\App\Http\Controllers\AuthController@postForgotPassword',
+]);
+
+Route::get('/mail', [
+	'uses'    => '\App\Http\Controllers\EmailController@index',
+	'as'      => 'email'
 ]);
