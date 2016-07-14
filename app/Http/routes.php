@@ -61,3 +61,8 @@ Route::get('/mail', [
 	'uses'    => '\App\Http\Controllers\EmailController@index',
 	'as'      => 'email'
 ]);
+
+Route::get('/user/activation/{token}', [
+	'uses'    => '\App\Http\Controllers\AuthController@activate',
+	'as'      => 'user.activate'
+]);

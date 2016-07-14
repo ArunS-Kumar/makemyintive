@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\EmailController;
 use Auth;
 
 class AuthController extends Controller
@@ -24,12 +25,17 @@ class AuthController extends Controller
 			'repassword' => 'required|same:password|min:6|max:12',
 		]);
 
+		$token = $this->getToken();
+
 		User::create([
 			'email'    => $input['email'],
 			'username' => $input['email'],
 			'name'     => $input['name'],
 			'password' => bcrypt($input['password']),
+			'token' => $token,
 		]);
+
+		$email = (new EmailController)->signupVerification($input['email'],$input['name'],$token);
 
 		return redirect()
 			->route('dashboard')
@@ -69,5 +75,18 @@ class AuthController extends Controller
 	{
 		dd($request);
 	}
+
+	protected function getToken()
+    {
+        return hash_hmac('sha256', str_random(40), config('app.key'));
+    }
+
+    public function activate($token)
+    {
+    	User::where('token', '=', $token)->update(array('activate' => 1));
+    	return redirect()
+			->route('dashboard')
+			->with('info', 'Your account has been successfully activated.');
+    }
 }
 
