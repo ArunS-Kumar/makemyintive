@@ -66,3 +66,19 @@ Route::get('/user/activation/{token}', [
 	'uses'    => '\App\Http\Controllers\AuthController@activate',
 	'as'      => 'user.activate'
 ]);
+
+Route::get('/admin/users', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@index',
+	'as'      => 'admin.users'
+]);
+
+Route::post('/admin/users/{id}', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@getusers',
+	'as'      => 'getusers'
+]);
+
+// Route::post('/admin/users/{id}', [
+// 	'uses'    => '\App\Http\Controllers\Admin\AdminController@updateusers',
+// ]);
+
+

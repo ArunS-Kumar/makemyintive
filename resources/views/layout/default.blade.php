@@ -7,6 +7,7 @@
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         @include('layout.partials.css')
+        @yield('page.css')
     </head>
    <body class="hold-transition skin-blue layout-top-nav">
     <div class="wrapper">
@@ -16,5 +17,7 @@
         </div>
         <!-- ./wrapper -->
         @include('layout.partials.js')
+        <!-- Page Script -->
+        @yield('page.script')
     </body>
 </html>
