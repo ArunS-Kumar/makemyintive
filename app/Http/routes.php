@@ -72,13 +72,19 @@ Route::get('/admin/users', [
 	'as'      => 'admin.users'
 ]);
 
-Route::post('/admin/users/{id}', [
+Route::post('/admin/users/{id}/getusers', [
 	'uses'    => '\App\Http\Controllers\Admin\AdminController@getusers',
 	'as'      => 'getusers'
 ]);
 
-// Route::post('/admin/users/{id}', [
-// 	'uses'    => '\App\Http\Controllers\Admin\AdminController@updateusers',
-// ]);
+Route::post('/admin/users/updateusers', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@updateusers',
+	'as'      => 'admin.updateusers'
+]);
+
+Route::get('/admin/users/{id}/deactive', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@deactive',
+	'as'      => 'admin.deactive'
+]);
 
 
