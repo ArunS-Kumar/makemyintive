@@ -15,7 +15,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Administrative <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="{{ route('admin.users') }}">Users</a></li>
-                <li><a href="#">Advertisement</a></li>               
+                <li><a href="{{ route('admin.advertisement') }}">Advertisement</a></li>               
               </ul>
             </li>
           </ul>

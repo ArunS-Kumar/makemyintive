@@ -87,4 +87,22 @@ Route::get('/admin/users/{id}/deactive', [
 	'as'      => 'admin.deactive'
 ]);
 
+Route::get('/admin/advertisement', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@advertisement',
+	'as'      => 'admin.advertisement'
+]);
 
+Route::post('/admin/advertisement/updateadvertisement', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@updateadvertisement',
+	'as'      => 'admin.updateadvertisement'
+]);
+
+Route::post('/admin/advertisement/{id}/getaddval', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@getadvertisement',
+	'as'      => 'getaddval'
+]);
+
+Route::get('/admin/users/{id}/deactive_advertisement', [
+	'uses'    => '\App\Http\Controllers\Admin\AdminController@deactive_advertisement',
+	'as'      => 'admin.deactive_advertisement'
+]);
