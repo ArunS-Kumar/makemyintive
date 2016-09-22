@@ -56,14 +56,22 @@
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
-                <img src="{{ url('dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
+                @if(!empty(Auth::user()->avatar)) 
+                <img src="{{ Auth::user()->avatar }}" class="user-image" alt="{{ Auth::user()->getName() }}">
+                @else
+                <img src="{{ url('dist/img/user2-160x160.jpg') }}" class="user-image" alt="{{ Auth::user()->getName() }}">
+                @endif
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                 <span class="hidden-xs">{{ Auth::user()->getName() }}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
                 <li class="user-header">
-                  <img src="{{ url('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                  @if(!empty(Auth::user()->avatar)) 
+                  <img src="{{ Auth::user()->avatar }}" class="img-circle" alt="{{ Auth::user()->getName() }}">
+                  @else
+                  <img src="{{ url('dist/img/user2-160x160.jpg') }}" class="img-circle" alt="{{ Auth::user()->getName() }}">
+                  @endif
 
                   <p>
                     {{ Auth::user()->getName() }}

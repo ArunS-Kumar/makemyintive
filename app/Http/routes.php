@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/redirect', '\App\Http\Controllers\SocialAuthController@redirect');
+Route::get('/callback', '\App\Http\Controllers\SocialAuthController@callback');
+
+
 Route::get('/', [
 	'uses'    => '\App\Http\Controllers\HomeController@index',
 	'as'      => 'home',

@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '1826944510871993',
+        'client_secret' => '0cceda0f92f8848a7a340f2e886816ce',
+        'redirect' => 'http://makemyintive.com/callback',
+    ],
+
 ];

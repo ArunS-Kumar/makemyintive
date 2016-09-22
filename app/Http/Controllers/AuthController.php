@@ -31,6 +31,7 @@ class AuthController extends Controller
 			'email'    => $input['email'],
 			'username' => $input['email'],
 			'name'     => $input['name'],
+			'type'     => 1,
 			'password' => bcrypt($input['password']),
 			'token' => $token,
 		]);
@@ -53,8 +54,8 @@ class AuthController extends Controller
 			'email'      => 'required|email|max:255',
 			'password'   => 'required|min:6|max:12',
 		]);
-
-		if (!Auth::attempt($request->only(['email', 'password']), $request->has('remember'))){
+		$input  = $request->all();
+		if (!Auth::attempt(['email' => $input['email'], 'password' => $input['password'], 'activate' => 1],$request->has('remember'))){
 			return redirect()->back()->with('info', 'Could not sign you in with those details.');
 		}
 		return redirect()->route('dashboard')->with('info', 'You are now signed in');
@@ -88,5 +89,6 @@ class AuthController extends Controller
 			->route('dashboard')
 			->with('info', 'Your account has been successfully activated.');
     }
+
 }
 
