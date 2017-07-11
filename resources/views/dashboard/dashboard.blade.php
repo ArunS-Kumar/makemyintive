@@ -2,6 +2,8 @@
 
 @section('content')
 <link rel="stylesheet" type="text/css" href="https://www.greetingsisland.com/Editor/css/editor.min.css?v=wCWjzEuCVpZUlTaj1o1aeC2dbErtI_LsmfgHjuRAqpc1">
+    <link rel="stylesheet" type="text/css" href="makemyinvite_slider/initcarousel-1.css">
+
  <!-- Full Width Column -->
   <div class="content-wrapper">
     <div class="container">
@@ -127,10 +129,110 @@
                 </div>
                 </div>
 
-                <div class="box3"> <h1>Box 3</h1>  </div>
-                <div class="box4"> <h1>Box 4</h1>  </div>
+                <div class="box3"> 
+                    <div id="amazingcarousel-container-2">
+                        <div id="amazingcarousel-2" style="display:none;position:relative;width:100%;max-width:180px;margin:0px auto 0px;">
+                            <div class="amazingcarousel-list-container">
+                                <ul class="amazingcarousel-list">
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#" ><img src="makemyinvite_slider/vlcsnap-2017-05-11-00h01m13s983.png"  alt="vlcsnap-2017-05-11-00h01m13s983" /></a>
+                                            </div>                   
+                                        </div>
+                                    </li>
 
-            </div>
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/GD4XTAb.jpg"  alt="GD4XTAb" /></a>
+                                            </div>                    
+                                        </div>
+                                    </li>
+
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/dive_in-1280x1024.jpg"  alt="dive_in-1280x1024" /></a>
+                                            </div>                    
+                                        </div>
+                                    </li>
+
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/3d-wallpaper-dans-3d-hd-desktop-wallpapers-romania.jpg"  alt="3d-wallpaper-dans-3d-hd-desktop-wallpapers-romania" /></a>
+                                            </div>                    
+                                        </div>
+                                    </li>
+
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/midnight drift racing.jpg"  alt="midnight drift racing" /></a>
+                                            </div>                        
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="amazingcarousel-prev"></div>
+                                <div class="amazingcarousel-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                  </div> 
+
+                <div class="box4">
+                    <div id="amazingcarousel-container-1">
+                        <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:180px;margin:0px auto 0px;">
+                            <div class="amazingcarousel-list-container">
+                                <ul class="amazingcarousel-list">
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#" ><img src="makemyinvite_slider/vlcsnap-2017-05-11-00h01m13s983.png"  alt="vlcsnap-2017-05-11-00h01m13s983" /></a>
+                                            </div>                   
+                                        </div>
+                                    </li>
+
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/GD4XTAb.jpg"  alt="GD4XTAb" /></a>
+                                            </div>                    
+                                        </div>
+                                    </li>
+
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/dive_in-1280x1024.jpg"  alt="dive_in-1280x1024" /></a>
+                                            </div>                    
+                                        </div>
+                                    </li>
+
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/3d-wallpaper-dans-3d-hd-desktop-wallpapers-romania.jpg"  alt="3d-wallpaper-dans-3d-hd-desktop-wallpapers-romania" /></a>
+                                            </div>                    
+                                        </div>
+                                    </li>
+
+                                    <li class="amazingcarousel-item">
+                                        <div class="amazingcarousel-item-container">
+                                            <div class="amazingcarousel-image">
+                                                <a href="#"><img src="makemyinvite_slider/midnight drift racing.jpg"  alt="midnight drift racing" /></a>
+                                            </div>                        
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="amazingcarousel-prev"></div>
+                                <div class="amazingcarousel-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
            
    
 
@@ -142,26 +244,33 @@
     <!-- /.container -->
   </div>
   <style type="text/css">
-        .editorFrame {
-            width: 450px;
-            height: 650px;
-        }
-        .box1, .box2, .box3, .box4 {
-            float: left;
-            margin-right: 20px; 
-            margin-bottom: 20px;
-        }
-        .controlbox {
-    display: inline-block;
-    vertical-align: top;
-    background-color: #fff;
-    width: 260px;
-    margin: 5px;
-    padding: 10px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
+
+    .container {
+        width: 1340px;
+    }
+    .editorFrame {
+        width: 487px;
+        height: 704px;
+    }
+    .box1, .box2, .box3, .box4 {
+        float: left;
+        margin-right: 20px; 
+        margin-bottom: 20px;
+    }
+    .box4 {
+        margin-right: 0px; 
+    }
+
+    .controlbox {
+        display: inline-block;
+        vertical-align: top;
+        background-color: #fff;
+        width: 260px;
+        padding: 10px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
 .controlbox .controlheading {
     background: none repeat scroll 0 0 #1A7BB7;
     border-top: 1px solid #4BA3FF;
