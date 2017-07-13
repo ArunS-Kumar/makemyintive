@@ -1,10 +1,22 @@
 @extends('layout.default')
 
-@section('content')
-<link rel="stylesheet" type="text/css" href="https://www.greetingsisland.com/Editor/css/editor.min.css?v=wCWjzEuCVpZUlTaj1o1aeC2dbErtI_LsmfgHjuRAqpc1">
-<link rel="stylesheet" type="text/css" href="makemyinvite_slider/initcarousel-1.css">
-<link rel="stylesheet" type="text/css" href="../fontselect.css" />
+@push('page.css')
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/initcarousel-1.css') }}">
+<style type="text/css">
+@font-face {
+    font-family: 'great_vibesregular';
+    src: url('{{ asset('font/GreatVibes-Regular.ttf') }}');
+}
+@font-face {
+    font-family: 'merriweatherbold_italic';
+    src: url('{{ asset('font/Merriweather-Italic.ttf') }}');
+}
+</style>
+@endpush
+
+@section('content')
 <!-- Full Width Column -->
 <div class="content-wrapper">
     <div class="container">
@@ -494,360 +506,38 @@
     <!-- /.container -->
 </div>
 
-<style type="text/css">
-
-    .container {
-        /*width: 1340px;*/
-    }
-
-    .editorFrame {
-        width: 487px;
-        height: 704px;
-    }
-
-    .box1,
-    .box2,
-    .box3,
-    .box4 {
-        float: left;
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-
-    .box2 {
-        width: 216px;
-    }
-
-    .box4 {
-        margin-right: 0px;
-    }
-
-    .controlbox {
-        display: inline-block;
-        vertical-align: top;
-        background-color: #fff;
-        width: 214px;
-        padding: 10px;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 18px;
-    }
-
-    .controlbox .controlheading {
-        background: none repeat scroll 0 0 #1A7BB7;
-        border-top: 1px solid #4BA3FF;
-        color: #fff;
-        font-weight: 700;
-        padding: 8px 5px;
-        text-align: center;
-        margin: -11px -11px 5px -11px;
-        font-size: 16px;
-    }
-
-    .controlbox ul {
-        margin: 0;
-        padding: 0;
-        margin-top: 10px;
-    }
-
-    .controlbox ul li {
-        display: inline-block;
-        margin: 5px 0;
-        padding: 2px 4px;
-    }
-
-    .controlbox label,
-    .controlbox p {
-        display: inline-block;
-        margin: 0 5px 5px 0px;
-    }
-
-    select.btn {
-        -webkit-appearance: button;
-        -moz-appearance: button;
-        appearance: button;
-        padding-right: 16px;
-        font-size: 14px;
-        width: 130px;
-    }
-
-    .btn-small {
-        padding: 2px 10px;
-        font-size: 11.9px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-    }
-
-    select.btn-small + .caret {
-        margin-left: -20px;
-        vertical-align: middle;
-    }
-
-    .caret {
-        display: inline-block;
-        width: 0;
-        height: 0;
-        vertical-align: top;
-        border-top: 4px solid #000000;
-        border-right: 4px solid transparent;
-        border-left: 4px solid transparent;
-        content: "";
-    }
-    .textcontmsg p {
-        font-size: 18px;
-    }
-    .textcontmsg {
-        text-align: center;
-    }
-
-
-    /* Font dropdown style */
-    .font-select {
-    /*font-size: 16px;*/
-    width: 184px;
-    position: relative;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    }
-
-    .font-select .fs-drop {
-    background: #fff;
-    border: 1px solid #aaa;
-    border-top: 0;
-    position: absolute;
-    top: 29px;
-    left: 0;
-    -webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15);
-    -moz-box-shadow   : 0 4px 5px rgba(0,0,0,.15);
-    -o-box-shadow     : 0 4px 5px rgba(0,0,0,.15);
-    box-shadow        : 0 4px 5px rgba(0,0,0,.15);
-    z-index: 999;
-    }
-
-    .font-select > a {
-    background-color: #fff;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));
-    background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, white 50%);
-    background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%);
-    background-image: -o-linear-gradient(top, #eeeeee 0%,#ffffff 50%);
-    background-image: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 );
-    background-image: linear-gradient(top, #eeeeee 0%,#ffffff 50%);
-    -webkit-border-radius: 4px;
-    -moz-border-radius   : 4px;
-    border-radius        : 4px;
-    -moz-background-clip   : padding;
-    -webkit-background-clip: padding-box;
-    background-clip        : padding-box;
-    border: 1px solid #aaa;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    height: 26px;
-    line-height: 26px;
-    padding: 0 0 0 8px;
-    color: #444;
-    text-decoration: none;
-    }
-
-    .font-select > a span {
-    margin-right: 26px;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    line-height: 1.8;
-    -o-text-overflow: ellipsis;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    cursor: pointer;
-    }
-
-    .font-select > a div {
-    -webkit-border-radius: 0 4px 4px 0;
-    -moz-border-radius   : 0 4px 4px 0;
-    border-radius        : 0 4px 4px 0;
-    -moz-background-clip   : padding;
-    -webkit-background-clip: padding-box;
-    background-clip        : padding-box;
-    background: #ccc;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
-    background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
-    background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
-    background-image: -o-linear-gradient(bottom, #ccc 0%, #eee 60%);
-    background-image: -ms-linear-gradient(top, #cccccc 0%,#eeeeee 60%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 );
-    background-image: linear-gradient(top, #cccccc 0%,#eeeeee 60%);
-    border-left: 1px solid #aaa;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    height: 100%;
-    width: 18px;
-    }
-
-    .font-select > a div b {
-    background: url('fontDropdown/fs-sprite.png') no-repeat 0 1px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    }
-
-    .font-select .fs-drop {
-    -webkit-border-radius: 0 0 4px 4px;
-    -moz-border-radius   : 0 0 4px 4px;
-    border-radius        : 0 0 4px 4px;
-    -moz-background-clip   : padding;
-    -webkit-background-clip: padding-box;
-    background-clip        : padding-box;
-    }
-
-    .font-select .fs-results {
-    margin: 0 4px 4px 0;
-    max-height: 190px;
-    width: 200px;
-    padding: 0 0 0 4px;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
-    }
-
-    .font-select .fs-results li {
-    line-height: 80%;
-    padding: 7px 7px 8px;
-    margin: 0;
-    width: 100%;
-    list-style: none;
-    font-size: 18px;
-    }
-
-    .font-select .fs-results li.active {
-    background: #3875d7;
-    color: #fff;
-    cursor: pointer;
-    }
-    .font-select .fs-results li em {
-    background: #feffde;
-    font-style: normal;
-    }
-
-    .font-select .fs-results li.active em {
-    background: transparent;
-    }
-
-    .font-select-active > a {
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
-    -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
-    -o-box-shadow     : 0 0 5px rgba(0,0,0,.3);
-    box-shadow        : 0 0 5px rgba(0,0,0,.3);
-    border: 1px solid #5897fb;
-    }
-
-    .font-select-active > a {
-    border: 1px solid #aaa;
-    -webkit-box-shadow: 0 1px 0 #fff inset;
-    -moz-box-shadow   : 0 1px 0 #fff inset;
-    -o-box-shadow     : 0 1px 0 #fff inset;
-    box-shadow        : 0 1px 0 #fff inset;
-    background-color: #eee;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee));
-    background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%);
-    background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%);
-    background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%);
-    background-image: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 );
-    background-image: linear-gradient(top, #ffffff 0%,#eeeeee 50%);
-    -webkit-border-bottom-left-radius : 0;
-    -webkit-border-bottom-right-radius: 0;
-    -moz-border-radius-bottomleft : 0;
-    -moz-border-radius-bottomright: 0;
-    border-bottom-left-radius : 0;
-    border-bottom-right-radius: 0;
-    }
-
-    .font-select-active > a div {
-    background: transparent;
-    border-left: none;
-    }
-
-    .font-select-active > a div b {
-    background-position: -18px 1px;
-    }
-/* Font dropdown style ends */
-
-li lable {
-    margin-right: 20px;
-}
-span.smalla {
-    float: left;
-    margin-right: 16px;
-    font-size: 12px;
-    margin-top: 4px; 
-}
-span.biga {
-    float: left;
-}
-.fontsizebar {
-    float: left;
-    width: 112px !important;
-    margin: 4px 10px 0 0;
-}
-span.biga i, span.smalla i {
-    width: 0px;
-}
-.backimgclr {
-
-}
-.layoutclr {
-
-}
-.text-color {
-    margin: 0 2px;
-}
-.text-color {
-    cursor: pointer;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    border-radius: 100%;
-    margin: 0 1px;
-}
-.text-color .color-thumb {
-    border: 2px solid transparent;
-    pointer-events: none;
-}
-.text-color .color-thumb {
-     display: inline-block; 
-     width: 18px; 
-     height: 18px; 
-     border-radius: 100%; 
-     border: 2px solid #e8e8e8; 
-     margin: 2px; 
-}
-.colors input[type="radio"], .align input[type="radio"] {
-    position: absolute;
-    left: -1500%;
-}
-.backimg-thumb {
-    display: inline-block;
-    width: 27px;
-    height: 37px;
-    border: 2px solid #e8e8e8;
-    margin: 2px;
-}
-.text-backimg {
-    cursor: pointer;
-    display: inline-block;
-    width: 31px;
-    height: 41px;
-    margin: 0 1px;
-}
-</style>
-
-
 @stop
+
+@push('page.script')
+
+<script src="{{ asset('js/amazingcarousel.js') }}"></script>
+<script src="{{ asset('js/initcarousel-1.js') }}"></script>
+<script src="{{ asset('js/jquery.fontselect.js') }}"></script>
+
+<script>
+$(function() {
+
+    $('#font').fontselect().change(function() {
+
+        // replace + signs with spaces for css
+        var font = $(this).val().replace(/\+/g, ' ');
+
+        // split font into family and weight
+        font = font.split(':');
+
+        // set family on paragraphs
+        $('p').css('font-family', font[0]);
+    });
+
+    $(".hide_show_clr_but").click(function(){
+        $(".displaymoreclr").toggle(120);
+    });
+
+    $(".hide_show_clr_but2").click(function(){
+        $(".displaymoreclr2").toggle(120);
+    });
+
+});
+</script>
+
+@endpush
