@@ -292,7 +292,12 @@ select.btn {
 /* Font dropdown style ends */
 
 li lable {
-    margin-right: 20px;
+    margin-right: 8px;
+    color: #989898;
+}
+
+lable.aligns.active {
+    color: #01df7c;
 }
 
 span.smalla {
