@@ -4,21 +4,6 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/dashboard.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/initcarousel-1.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.css') }}" >
-
-<style type="text/css">
-.overlay {
-    z-index: 50;
-    background: rgba(255,255,255,0.7);
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-</style>
-
 @endpush
 
 @section('content')
@@ -45,9 +30,7 @@
                         <div class="editorFrame ui-droppable" >
                             <div class="card_decor decor_full_image"><img src="/inviteImgs/Backgrounds/Floral-Swirls_8.png"></div>
                             
-                            <div class="card_decor slot slot_text freesize dark-text-bg" style="left: 455.266px; top: 5.96875px; outline-color: rgba(255, 255, 255, 0.95); margin-left: -7.5px;border: 3px solid #e8e8e8;">
-                                <i class="fa fa-fw fa-plus"></i>
-                            </div>
+                            
 
                             <div class="card_decor slot slot_text freesize dark-text-bg" style="left: 166.778px; top: 90.9787px; outline-color: rgba(255, 255, 255, 0.95); margin-left: -7.5px;">
                                 <textarea class="textarea_style" placeholder=" " style="text-align: center; color: rgb(255, 255, 255); font-family: merriweatherbold_italic; font-size: 17px; line-height: 18px; width: 167px; height: 18px;font-weight: bold;">You are invited to the</textarea>
@@ -179,7 +162,7 @@
                                     <label class="lblfix text-color " for="cr_0">
                                         <span class="color-thumb" style="background-color: #000000"></span>
                                     </label>
-                                    <input id="cr_1" type="radio" name="color">
+                                    <input id="cr_1" type="radio" name="color" checked="ture">
                                     <label class="lblfix text-color " for="cr_1">
                                         <span class="color-thumb" style="background-color: #ffffff"></span>
                                     </label>
@@ -308,17 +291,41 @@
                                 </div>
                             </li>
 
-                            <li style="text-align: center;display: block;font-size: 18px;">
+                            <li style="text-align: center;display: block;font-size: 18px;border-bottom: 1px solid #e8e8e8;">
                                
-                                <a href="javascript:;"><lable class="leftaligh aligns"><i class="fa fa-fw fa-align-left"></i></lable></a>
-                                <a href="javascript:;"><lable class="centerligh aligns active"><i class="fa fa-fw fa-align-center"></i></lable></a>
-                                <a href="javascript:;" style="border-right: 1px solid #e8e8e8;"><lable class="centerligh aligns "><i class="fa fa-fw fa-align-right"></i></lable></a>
-                                <a href="javascript:;"><lable class="centerligh aligns active"><i class="fa fa-fw fa-bold"></i></lable></a>
-                                <a href="javascript:;" ><lable class="rightligh aligns" style="margin-right: 0px; "><i class="fa fa-fw fa-italic"></i></lable></a>
-
-
+                                <a href="javascript:;">
+                                    <lable class="leftaligh aligns" id="align-left" >
+                                        <i class="fa fa-fw fa-align-left"></i>
+                                    </lable>
+                                </a>
+                                <a href="javascript:;">
+                                    <lable class="centerligh aligns active" id="align-center" >
+                                        <i class="fa fa-fw fa-align-center"></i>
+                                    </lable>
+                                </a>
+                                <a href="javascript:;" style="border-right: 1px solid #e8e8e8;">
+                                    <lable class="centerligh aligns" id="align-right" >
+                                        <i class="fa fa-fw fa-align-right"></i>
+                                    </lable>
+                                </a>
+                                <a href="javascript:;">
+                                    <lable class="centerligh aligns1 active" id="fa-bold" >
+                                        <i class="fa fa-fw fa-bold"></i>
+                                    </lable>
+                                </a>
+                                <a href="javascript:;" >
+                                    <lable class="rightligh aligns1" style="margin-right: 0px; " id="fa-italic" >
+                                        <i class="fa fa-fw fa-italic"></i>
+                                    </lable>
+                                </a>
                             </li>
 
+                            <li>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="add_text" name="add_text" placeholder="Add Text ...">
+                                    <span class="input-group-addon" style="cursor: pointer;" id="add_new_text"><i class="fa fa-fw fa-plus"></i></span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
 
@@ -519,16 +526,32 @@
 
                             <li style="text-align: center;display: block;font-size: 18px;">
                                
-                                <a href="#"><lable class="leftaligh"><i class="fa fa-fw fa-align-left"></i></lable></a>
-                                <a href="#"><lable class="centerligh"><i class="fa fa-fw fa-align-center"></i></lable></a>
-                                <a href="#" style="border-right: 1px solid #e8e8e8;"><lable class="centerligh"><i class="fa fa-fw fa-align-right"></i></lable></a>
-                                <a href="#"><lable class="centerligh"><i class="fa fa-fw fa-bold"></i></lable></a>
-                                <a href="#" ><lable class="rightligh" style="margin-right: 0px; "><i class="fa fa-fw fa-italic"></i></lable></a>
-
-
-                            </li>
-                            
-                            
+                                <a href="#">
+                                    <lable class="leftaligh">
+                                        <i class="fa fa-fw fa-align-left"></i>
+                                    </lable>
+                                </a>
+                                <a href="#">
+                                    <lable class="centerligh">
+                                        <i class="fa fa-fw fa-align-center"></i>
+                                    </lable>
+                                </a>
+                                <a href="#" style="border-right: 1px solid #e8e8e8;">
+                                    <lable class="centerligh">
+                                        <i class="fa fa-fw fa-align-right"></i>
+                                    </lable>
+                                </a>
+                                <a href="#">
+                                    <lable class="centerligh">
+                                        <i class="fa fa-fw fa-bold"></i>
+                                    </lable>
+                                </a>
+                                <a href="#" >
+                                    <lable class="rightligh" style="margin-right: 0px; ">
+                                        <i class="fa fa-fw fa-italic"></i>
+                                    </lable>
+                                </a>
+                            </li>                            
                             
                         </ul>
                         <div class="overlay">
@@ -647,24 +670,11 @@
 
 <script src="{{ asset('js/amazingcarousel.js') }}"></script>
 <script src="{{ asset('js/initcarousel-1.js') }}"></script>
-<script src="{{ asset('js/jquery.fontselect.js') }}"></script>
 
 <script>
 $(function() {
 
-    $( ".slot_text" ).draggable();
-
-    $('#font').fontselect().change(function() {
-
-        // replace + signs with spaces for css
-        var font = $(this).val().replace(/\+/g, ' ');
-
-        // split font into family and weight
-        font = font.split(':');
-
-        // set family on paragraphs
-        $('p').css('font-family', font[0]);
-    });
+    $( ".card_decor" ).draggable();
 
     $(".hide_show_clr_but").click(function(){
         $(".displaymoreclr").toggle(120);
@@ -678,21 +688,7 @@ $(function() {
         $("#editor-fonts").toggle(120);
     });
 
-    $(document).mouseup(function(e) 
-    {
-        var container = $('#editor-fonts');
-        var select = $('.selected');
-        if (!container.is(e.target) && !select.is(e.target) && container.has(e.target).length === 0 && select.has(e.target).length === 0) 
-        {
-            container.hide();
-        }
-    });
-
-    $(".card_decor").click(function(){
-        var textarea = $(this).find("textarea");
-        // textarea.css({"color": "red"});
-        console.log(textarea.val());
-    });
+    
 
     // Style Layout script //
     $(".lblfix").click(function(){
@@ -709,17 +705,87 @@ $(function() {
         $('.textarea_style').css({"font-family": font_family});
     });
 
-    $(".aligns").click(function(){
-        $(this).parent().parent().find('a lable').removeClass('active');
+    $("#align-left").click(function(){
+        $(this).parent().parent().find('a lable.aligns').removeClass('active');
         $(this).addClass('active');
+        $('.textarea_style').css({"text-align": "left"});
 
     });
 
-    
+    $("#align-center").click(function(){
+        $(this).parent().parent().find('a lable.aligns').removeClass('active');
+        $(this).addClass('active');
+        $('.textarea_style').css({"text-align": "center"});
+    });
 
+    $("#align-right").click(function(){
+        $(this).parent().parent().find('a lable.aligns').removeClass('active');
+        $(this).addClass('active');
+        $('.textarea_style').css({"text-align": "right"});
+    });
+
+    $("#fa-bold").click(function(){
+        $(this).toggleClass('active');
+        if($(this).hasClass( "active" )) {
+            $('.textarea_style').css({"font-weight": "bold"});
+        } else {
+            $('.textarea_style').css({"font-weight": "normal"});
+        }
+    });
+
+    $("#fa-italic").click(function(){
+        $(this).toggleClass('active');
+        if($(this).hasClass( "active" )) {
+            $('.textarea_style').css({"font-style": "italic"});
+        } else {
+            $('.textarea_style').css({"font-style": "normal"});
+        }
+    });
 });
 
 
+$(document).on('click', '#add_new_text', function() {
+    var text = 'New Text';
+    if($('#add_text').val() != '') text = $('#add_text').val();
+    var html = '<div class="card_decor slot slot_text freesize dark-text-bg" style="left: 166.778px; top: 40px; outline-color: rgba(255, 255, 255, 0.95); margin-left: -7.5px;"><textarea class="textarea_style" placeholder=" " style="text-align: center; color: rgb(255, 255, 255); font-family: merriweatherbold_italic; font-size: 17px; line-height: 18px; width: 167px; height: 18px;font-weight: bold;">'+text+'</textarea> <a class="delete_handle" sticky_handle="sw" style="left: -15px; bottom: -15px;"></a></div>';
+    $('.editorFrame').append(html);
+    $( ".card_decor" ).draggable();
+    $('#add_text').val('');  
+});
+
+// Syle Your Message //
+$(document).on('click', '.card_decor', function() {
+    var msg = $(this);
+    msg.parent().find('.card_decor').find('.delete_handle').hide();
+    msg.find('.delete_handle').show();
+
+    // var textarea = $(this).find("textarea");
+    // textarea.css({"color": "red"});
+    // console.log(textarea.val());
+
+});
+
+// Delete Msg //
+$(document).on('click', '.delete_handle', function() {
+    $(this).closest('.card_decor').remove();
+});
+
+$(document).mouseup(function(e) 
+{
+    var container = $('#editor-fonts');
+    var select = $('.selected');
+    if (!container.is(e.target) && !select.is(e.target) && container.has(e.target).length === 0 && select.has(e.target).length === 0) 
+    {
+        container.hide();
+    }
+
+    var editorFrame = $('.editorFrame');
+    if (!editorFrame.is(e.target) && editorFrame.has(e.target).length === 0 ) 
+    {
+        $('.delete_handle').hide();
+    }
+
+});
 
 </script>
 
