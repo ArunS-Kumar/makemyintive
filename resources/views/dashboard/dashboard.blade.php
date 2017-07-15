@@ -772,6 +772,7 @@ $(document).on('click', '.delete_handle', function() {
 
 $(document).mouseup(function(e) 
 {
+    // Hide font dropdown //
     var container = $('#editor-fonts');
     var select = $('.selected');
     if (!container.is(e.target) && !select.is(e.target) && container.has(e.target).length === 0 && select.has(e.target).length === 0) 
@@ -779,6 +780,7 @@ $(document).mouseup(function(e)
         container.hide();
     }
 
+    // Hide delete Icon //
     var editorFrame = $('.editorFrame');
     if (!editorFrame.is(e.target) && editorFrame.has(e.target).length === 0 ) 
     {
