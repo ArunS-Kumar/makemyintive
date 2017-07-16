@@ -792,8 +792,9 @@ $(document).mouseup(function(e)
     }
 
     // Hide Style Message section //
-    var styleMessage = $('#card_decor');
-    if (!styleMessage.is(e.target) && styleMessage.has(e.target).length === 0 ) 
+    var inviteMessage = $('#card_decor');
+    var styleMessage = $('#style_message');
+    if (!inviteMessage.is(e.target) && inviteMessage.has(e.target).length === 0 && !styleMessage.is(e.target) && styleMessage.has(e.target).length === 0 ) 
     {
         $('#style_message').hide();
     }
