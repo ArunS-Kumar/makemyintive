@@ -752,7 +752,7 @@ $(document).on('click', '#add_new_text', function() {
 $(document).on('click', '.card_decor', function() {
     var msg = $(this);
     msg.parent().find('.card_decor').find('.delete_handle').hide();
-    msg.find('.delete_handle').show();
+    msg.find('.delete_handle').show(50);
     
     // Dispaly Style Ur Message Dynamically //
     var top = $(this).css('top').replace("px", "");
@@ -761,7 +761,7 @@ $(document).on('click', '.card_decor', function() {
     left = ( parseFloat(left) + parseFloat(width) ) + parseFloat('-490');
     top = parseFloat(top)  + parseFloat('-838');
 
-    $('#style_message').css({"top": top, "left": left}).show();
+    $('#style_message').css({"top": top, "left": left}).show('fade', 500 );
 
     // var textarea = $(this).find("textarea");
     // textarea.css({"color": "red"});
@@ -772,6 +772,7 @@ $(document).on('click', '.card_decor', function() {
 // Delete Msg //
 $(document).on('click', '.delete_handle', function() {
     $(this).closest('.card_decor').remove();
+    $('#style_message').hide();
 });
 
 $(document).mouseup(function(e) 
